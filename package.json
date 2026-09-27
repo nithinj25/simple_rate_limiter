@@ -1,0 +1,32 @@
+{
+  "name": "rate-limiter",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node --experimental-strip-types --disable-warning=ExperimentalWarning src/index.ts",
+    "dev": "node --watch --experimental-strip-types --disable-warning=ExperimentalWarning src/index.ts",
+    "test": "node --test --experimental-strip-types --disable-warning=ExperimentalWarning test/**/*.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.2",
+    "@types/redis": "^4.0.10",
+    "typescript": "^7.0.2"
+  },
+  "types": "dist/src/index.d.ts",
+  "dependencies": {
+    "express": "^5.2.1",
+    "ioredis": "^6.0.0",
+    "redis": "^6.2.1"
+  }
+}
